@@ -14,8 +14,8 @@
     <div class="wrapper">
       <form action="">
         <div>
-          <input type="text">
-          <button type="button" name="button">Поиск</button>
+          <input type="text" id="input">
+          <button type="button" name="button" id="button">Поиск</button>
           <p></p>
         </div>
       </form>
@@ -28,7 +28,43 @@
               </div>
            </div>
           </script>
+      <div id="test">
+        <section>
+
+        <form action="" class="test">
+          <input type="text" name="" value="" placeholder="Введите вопрос" id="question">
+          <input type="text" name="" value="" placeholder="Введите варианты ответов через запятую" id="answers">
+          <input type="text" name="" value="" placeholder="Введите порядковый номер правильного ответа" id="correctAnswer">
+          <input type="submit" name="" value="Сформировать" id="submit">
+        </form>
+
+      </section>
+        <div id="containerTest"></div>
+          <div class="test">
+            <script type="text/templateTest" id="templateTest">
+              <h3 class="articale__title"><%- question %></h3>
+      <div class="block">
+        <form class="articale__form">
+          <ul class="answers__list">
+              <% _.map(answers, function(item) { %>
+              <li class="answers__item">
+                <label>
+                  <input type="radio" name="radio-btn">
+                  <span>
+                    <%- item %>
+                  </span>
+                </label>
+              </li>
+              <% }); %>
+          </ul>
+        </form>
+      </div>
+            </script>
+          </div>
+
+      </div>
     </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>
