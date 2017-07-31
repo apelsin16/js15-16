@@ -86,9 +86,10 @@ localStorage.setItem('storageElement', '[]');
       getArray= JSON.parse(localStorage.getItem('storageElement'));
     }
 
-submit.addEventListener('click', function(){
+submit.addEventListener('click', function(e){
 
 create();
+e.preventDefault();
 
 });
 
