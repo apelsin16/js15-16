@@ -28,7 +28,7 @@
               </div>
            </div>
           </script>
-      <!-- <div id="test">
+      <div id="test">
         <section>
 
         <form action="" class="test">
@@ -62,7 +62,7 @@
             </script>
           </div>
 
-      </div> -->
+      </div>
     </div>
 
     <script src="js/script.js"></script>
