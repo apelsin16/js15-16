@@ -4,7 +4,8 @@
 
 
   var btn = document.getElementById('button'),
-      input = document.getElementById('input');
+      input = document.getElementById('input'),
+      form = document.getElementById('form');
 
 
 function searchInput(){
@@ -63,6 +64,22 @@ function createAPI (){
   btn.addEventListener('click', function(){
     searchInput();
   });
+
+        function addEvent(obj, type, fn){
+            if (obj.addEventListener){
+                obj.addEventListener( type, fn, false );
+            } else if(obj.attachEvent) {
+                obj.attachEvent( "on"+type, fn );
+            } else {
+                obj["on"+type] = fn;
+            }
+        }
+        addEvent(form, 'keypress', function(e) {
+            if (e.keyCode == 13) {
+                searchInput();
+                e.preventDefault();
+            }
+        });
 
 var question = document.getElementById('question'),
     answers = document.getElementById('answers'),
